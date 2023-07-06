@@ -9,11 +9,16 @@ def index(request):
     if request.method == "POST":
         data=request.data.get("data")
         if type(data) is dict:
-            if list(data.keys())==["District"]:
+            if "District" in list(data.keys()):
                 if data["District"] in all_districts:
                     return Response(district(data["District"]))
                 else:
                     return Response({'msg':'error','info':"Entered district doesn't exist"})
+            elif "Province" in list(data.keys()):
+                if data["Province"] in all_provinces:
+                    return Response(province(data["Province"],data["alldata"]))
+                else:
+                    return Response({'msg':'error','info':"Entered province doesn't exist"})
         else:
             return Response(alldata(data))
         # return Response({"msg":data})
@@ -40,3 +45,17 @@ def district(district):
             if district==list(dists.keys())[0]:
                 final.append(dists[district])
     return ({"msg":"success","info":f"Local_bodies in {district} district is sent.","data":final[0]})
+
+def province(province,alldata):
+    json_data = open('E:/Codes/django/projects/localbody/static/local_level.json')
+    main_data = json.load(json_data)
+    json_data.close()
+    final=[]
+    for prov in main_data:
+        if prov == province:
+            for provv in main_data[prov]:
+                if alldata != "True":
+                    final.append(list(provv.keys())[0])
+                else:
+                    final.append(provv)
+    return ({"msg":"success","info":f"Local_bodies in {province} is sent.","data":final})
