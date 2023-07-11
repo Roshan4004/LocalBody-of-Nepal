@@ -11,7 +11,7 @@ Basically, you can send a POST request of your preferred type of data(You'll und
 
 #### Get all items
 
-```http
+```
 You don't have access to get all items at once since it's a large data and server might have issues. 
 ```
 
@@ -54,7 +54,7 @@ You don't have access to get all items at once since it's a large data and serve
   ```
     {
     "data":{"Province":"Name of province"(eg:Gandaki Pradesh, you can look into the all provinces response for correct name to avoid error),
-  "alldata":"True/False"(True to get local bodies in each districts as well, False to get only list of district inside that pradesh)}
+    "alldata":"True/False"(True to get local bodies in each districts as well, False to get only list of district inside that pradesh)}
     }
   ```
 
