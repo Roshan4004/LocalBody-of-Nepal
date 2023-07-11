@@ -58,4 +58,7 @@ def province(province,alldata):
                     final.append(list(provv.keys())[0])
                 else:
                     final.append(provv)
-    return ({"msg":"success","info":f"Local_bodies in {province} is sent.","data":final})
+    if alldata != "True":
+        return ({"msg":"success","info":f"Disricts in {province} is sent.","data":final})
+    else:
+        return ({"msg":"success","info":f"Disricts with local_bodies in {province} is sent.","data":final})
