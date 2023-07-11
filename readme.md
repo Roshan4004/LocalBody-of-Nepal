@@ -1,0 +1,229 @@
+readme.so logo <https://readme.so/>
+Menu
+
+light
+
+Download
+
+
+      Sections
+      Reset
+      Delete
+
+
+        Click on a section below to edit the contents
+
+  *
+
+    Title and Description
+
+  *
+
+    API Reference
+
+    reset-icon
+
+    trash-icon
+
+    To pick up a draggable item, press the space bar. While dragging,
+    use the arrow keys to move the item. Press space again to drop the
+    item in its new position, or press escape to cancel.
+
+
+        Click on a section below to add it to your readme
+
+Custom Section
+
+  *
+    Acknowledgements
+
+  *
+    Appendix
+
+  *
+    Authors
+
+  *
+    Badges
+
+  *
+    Color Reference
+
+  *
+    Contributing
+
+  *
+    Demo
+
+  *
+    Deployment
+
+  *
+    Documentation
+
+  *
+    Environment Variables
+
+  *
+    FAQ
+
+  *
+    Features
+
+  *
+    Feedback
+
+  *
+    Github Profile - About Me
+
+  *
+    Github Profile - Introduction
+
+  *
+    Github Profile - Links
+
+  *
+    Github Profile - Other
+
+  *
+    Github Profile - Skills
+
+  *
+    Installation
+
+  *
+    Lessons
+
+  *
+    License
+
+  *
+    Logo
+
+  *
+    Optimizations
+
+  *
+    Related
+
+  *
+    Roadmap
+
+  *
+    Run Locally
+
+  *
+    Screenshots
+
+  *
+    Support
+
+  *
+    Tech
+
+  *
+    Running Tests
+
+  *
+    Usage/Examples
+
+  *
+    Used By
+
+
+      Editor
+
+district.
+  ```
+    {
+    "data":{"District":"Name of district"(eg:Kaski)
+    }
+  ```
+}
+- To get list of district in a specific province.
+  ```
+    {
+    "data":{"Province":"Name of province"
+    }
+  ```
+(eg:Gandaki Pradesh, you can look into the all 
+provinces response for correct name to avoid error)
+,"alldata":"True/False"(True to get local bodies 
+in each districts as well, False to get only list 
+of district inside that pradesh)}
+
+of district inside that pradesh)} } ```
+
+Enter to Rename, Shift+Enter to Preview
+
+Follow link <#> (ctrl + click)
+
+  * Insert (⏎)
+
+  * show more (Ctrl+Space)
+
+Preview
+
+Raw
+
+
+  LocalBody of Nepal
+
+This is an api for list of all local bodies of Nepal, aligned with their
+respective districts and province.
+
+The data I got in this api is by web scraping so the data mayn't be 100%
+correct. Basically, you can send a POST request of your preferred type
+of data(You'll understand more in documentation later.) and then get the
+required data.
+
+
+    API Reference
+
+
+        Get all items
+
+|You don't have access to get all items at once since it's a large data and server might have issues. |
+
+
+        Get item
+
+|  https://roshan4004.pythonanywhere.com/localbody/|
+
+Parameter	Type	Description
+|data|	|string|	*Required*. type and which specific data you want to get
+
+Examples of payload and response for each type of data is shown below:
+
+  * To get all districts of Nepal
+
+    |  {
+      "data":"Districts"
+      }|
+
+  * To get all provinces of Nepal
+
+    |  {
+      "data":"Provinces"
+      }|
+
+  * To get all local bodies of Nepal
+
+    |  {
+      "data":"Local_bodies"
+      }|
+
+  * To get list of local bodies in a specific district.
+
+    |  {
+      "data":{"District":"Name of district"(eg:Kaski)}
+      }|
+
+  * To get list of district in a specific province.
+
+    |  {
+      "data":{"Province":"Name of province"(eg:Gandaki Pradesh, you can look into the all provinces response for correct name to avoid error),"alldata":"True/False"(True to get local bodies in each districts as well, False to get only list of district inside that pradesh)}
+      }|
+
+readme.so
+
